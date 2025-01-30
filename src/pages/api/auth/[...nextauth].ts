@@ -10,6 +10,6 @@ export default NextAuth({
       clientId: GoogleClientId as string,
       clientSecret: GoogleClientSecret as string,
     }),
-    
   ],
+  secret: process.env.SECRET,
 });
