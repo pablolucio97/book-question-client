@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inria_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
-import SessionProviderWrapper from "@/components/SessionProviderWrapper";
+import SessionProviderWrapper from "@/contexts/SessionProviderWrapper";
 
 const poppins = Poppins({
   variable: "--font-poppins-sans",
