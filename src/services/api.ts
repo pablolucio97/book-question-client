@@ -1,7 +1,9 @@
 import axios, { AxiosResponse } from "axios";
 
+const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 export const api = axios.create({
-  baseURL: "http://localhost:3333",
+  baseURL,
 });
 
 export interface IApiSuccessResponse<T> {
@@ -15,6 +17,6 @@ api.interceptors.response.use(
     if (process.env.NODE_ENV === "development") {
       console.log("[RESPONSE] - ", response);
     }
-    return response
+    return response;
   }
 );
